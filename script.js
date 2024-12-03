@@ -10,6 +10,7 @@ function StoreValue(value) {
 
 function Submit() {
     if (isSubmittingFirst) {
+        // Store number1 if DisplayedNum is not empty
         if (DisplayedNum !== '') {
             number1 = parseFloat(DisplayedNum); 
             document.getElementById('Number1').textContent = `Number 1: ${number1}`;
@@ -23,12 +24,13 @@ function Submit() {
             isSubmittingFirst = true;  // Ready to start with number1 again
         }
     }
-
+    // Clear only the current displayed number, not number1 or number2
     DisplayedNum = ''; 
     document.getElementById('output').textContent = 'Current Number: ';
 }
 
 function Clear() {
+    // Reset all values including number1 and number2
     DisplayedNum = ''; 
     number1 = null; 
     number2 = null; 
@@ -36,7 +38,11 @@ function Clear() {
     document.getElementById('Number1').textContent = 'Number 1: ';
     document.getElementById('Number2').textContent = 'Number 2: ';
     document.getElementById('Result').textContent = 'Result: ';
+    
+    // Ensure the next number entered is stored as number1
+    isSubmittingFirst = true; 
 }
+
 function add() {
     if (number1 !== null && number2 !== null) {
         result = number1 + number2;
