@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="calculator">
+        <h1>Calculator</h1>
+
+        <!-- Display Section -->
+        <div class="display">
+            <p id="output">Current Number: </p>
+            <p id="Number1">Number 1: </p>
+            <p id="Number2">Number 2: </p>
+            <p id="Result">Result: </p>
+            <button class="submit" onclick="Submit()">Submit</button>
+        </div>
+
+        <!-- Numpad Section -->
+        <div class="numpad">
+            <table>
+                <tr>
+                    <td><button onclick="StoreValue(7)">7</button></td>
+                    <td><button onclick="StoreValue(8)">8</button></td>
+                    <td><button onclick="StoreValue(9)">9</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="StoreValue(4)">4</button></td>
+                    <td><button onclick="StoreValue(5)">5</button></td>
+                    <td><button onclick="StoreValue(6)">6</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="StoreValue(1)">1</button></td>
+                    <td><button onclick="StoreValue(2)">2</button></td>
+                    <td><button onclick="StoreValue(3)">3</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="StoreValue(0)">0</button></td>
+                    <td><button onclick="Clear()" id="C">C</button></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Operations Section -->
+        <div class="operations">
+            <label for="Operations">Operations</label>
+            <div class="operation-buttons">
+                <button onclick="add()">+</button>
+                <button onclick="subtract()">-</button>
+                <button onclick="multiply()">X</button>
+                <button onclick="devide()">/</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
